@@ -900,7 +900,7 @@ public:
     \throw std::out_of_range When the remaining buffer size is too small.
     */
     void push_back_string(int tag, std::string_view s) {
-        push_back_string(tag, s.begin(), s.end());
+        push_back_string(tag, s.data(), s.data() + s.length());
     }
 #endif
 
